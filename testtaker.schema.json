@@ -1,0 +1,972 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Testtaker Schema 1.3.0",
+  "schema_version": "1.3.0",  
+  "description": "Schema Testtaker-json",
+  "type": "object",
+  "required": [
+    "metadata",
+    "group"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "customTexts": {
+      "type": "object",
+      "description": "Key-Value Paare für benutzerdefinierte Texte",
+      "properties": {
+        "login_sidepanel_title": {
+          "type": "string",
+          "description": "Titel des seitlichen Infobereichs auf der Anmeldeseite"
+        },
+        "login_sidepanel_subtitle": {
+          "type": "string",
+          "description": "Untertitel des seitlichen Infobereichs auf der Anmeldeseite"
+        },
+        "login_subtitle": {
+          "type": "string",
+          "description": "Titel für Starter-Seite"
+        },
+        "login_testEndButtonLabel": {
+          "type": "string",
+          "description": "Schalterbeschriftung für 'Test beenden'"
+        },
+        "login_testResumeButtonLabel": {
+          "type": "string",
+          "description": "Schalterbeschriftung für 'Test fortsetzen'"
+        },
+        "booklet_warningLeaveTimerBlockTextPrompt": {
+          "type": "string",
+          "description": "Schalterbeschriftung für 'Zurück zum Test'"
+        },
+        "booklet_warningLeaveTitle-testlet": {
+          "type": "string",
+          "description": "Titel für Warnung (Dialogbox) eines nur einmal betretbaren Bereiches."
+        },
+        "booklet_warningLeaveTitle-unit": {
+          "type": "string",
+          "description": "Titel für Warnung (Dialogbox) einer nur einmal betretbaren Aufgabe."
+        },
+        "booklet_warningLeaveTextPrompt-testlet": {
+          "type": "string",
+          "description": "Text für Warnung (Dialogbox) eines nur einmal betretbaren Bereiches."
+        },
+        "booklet_warningLeaveTextPrompt-unit": {
+          "type": "string",
+          "description": "Text für Warnung (Dialogbox) eines nur einmal betretbaren Bereiches."
+        },
+        "booklet_blockLockedByAfterLeave": {
+          "type": "string",
+          "description": "Block kann nicht noch einmal betreten werden"
+        },
+        "booklet_lockedByAfterLeave": {
+          "type": "string",
+          "description": "Aufgabe kann nicht noch einmal betreten werden"
+        },
+        "login_bookletSelectPromptNull": {
+          "type": "string",
+          "description": "Nachricht für den Fall, dass Booklet(s) beendet wurden und keine weiteren zur Verfügung stehen"
+        },
+        "login_pagesNaviPrompt": {
+          "type": "string",
+          "description": "Aufforderungstext, weitere Seiten einer Unit auszuwählen, z. B. 'Wähle hier andere Seiten dieser Aufgabe:'"
+        },
+        "login_bookletSelectPromptOne": {
+          "type": "string",
+          "description": "Aufforderung, den einen gefundenen Test anzuklicken (auf Schalter klicken)"
+        },
+        "login_bookletSelectPromptMany": {
+          "type": "string",
+          "description": "Aufforderung, aus der Liste der gefundenen Tests einen auszusuchen (auf Schalter klicken)"
+        },
+        "login_codeInputPrompt": {
+          "type": "string",
+          "description": "Aufforderung, Code einzugeben (bei einem zweistufigen Login-Prozess)"
+        },
+        "login_codeInputTitle": {
+          "type": "string",
+          "description": "Titel des Eingabeformulares für den Code"
+        },
+        "login_codeInputErrorTitle": {
+          "type": "string",
+          "description": "Titelzeile des Fehlertext bei falscher Codeinegabe"
+        },
+        "login_codeInputErrorBody": {
+          "type": "string",
+          "description": "Haupttext des Fehlertext bei falscher Codeinegabe"
+        },
+        "login_unsupportedBrowser": {
+          "type": "string",
+          "description": "Warnung-Banner, wenn ein nicht unterstützer Browser verwendet wird. Ersetzungen (%s): Browser-Name, Browser-Version."
+        },
+        "booklet_msgNavigationDeniedTitle": {
+          "type": "string",
+          "description": "Titel der Nachricht, dass nicht weitergeblättert werden kann, solange die Aufgabe nicht vollständig bearbeitet / gesehen worden ist."
+        },
+        "booklet_msgNavigationDeniedText_presentationIncomplete": {
+          "type": "string",
+          "description": "Text der Nachricht, dass nicht weitergeblättert werden kann, solange die Aufgabe nicht vollständig gesehen worden ist."
+        },
+        "booklet_msgNavigationDeniedText_responsesIncomplete": {
+          "type": "string",
+          "description": "Titel der Nachricht, dass nicht weitergeblättert werden kann, solange die Aufgabe nicht vollständig bearbeitet worden ist."
+        },
+        "booklet_codeToEnterTitle": {
+          "type": "string",
+          "description": "Dialogbox für die Eingabe eines Freigabewortes"
+        },
+        "booklet_codeToEnterPrompt": {
+          "type": "string",
+          "description": "Dialogbox für die Eingabe eines Freigabewortes: Aufforderung für die Eingabe eines Freigabewortes"
+        },
+        "booklet_msgTimerStarted": {
+          "type": "string",
+          "description": "Nachricht, dass der Timer für die Bearbeitung eines Abschnittes gestartet wurde"
+        },
+        "booklet_msgTimerCancelled": {
+          "type": "string",
+          "description": "Nachricht, dass die Bearbeitung eines Abschnittes mit Timer abgebrochen wurde"
+        },
+        "booklet_msgSoonTimeOver": {
+          "type": "string",
+          "description": "Nachricht, dass für die Bearbeitung eines Abschnittes noch x min Zeit ist"
+        },
+        "booklet_msgTimeOver": {
+          "type": "string",
+          "description": "Nachricht, dass die Bearbeitungszeit für einen Abschnitt abgelaufen ist."
+        },
+        "booklet_warningLeaveTimerBlockTitle": {
+          "type": "string",
+          "description": "Titel für Warnung (Dialogbox) vor dem vorzeitigen Verlassen eines Abschnittes mit Timer"
+        },
+        "booklet_tasklisttitle": {
+          "type": "string",
+          "description": "Titel für die Auflistung der Aufgaben (Schalter)"
+        },
+        "syscheck_questionsintro": {
+          "type": "string",
+          "description": "Aufforderung, die Fragen (Questionnaire) zu beantworten"
+        },
+        "booklet_errormessage": {
+          "type": "string",
+          "description": "Nachricht an die Testperson, wenn ein schwerer Fehler aufgetreten ist"
+        },
+        "booklet_pausedmessage": {
+          "type": "string",
+          "description": "Nachricht an die Testperson, wenn der Test vom System unterbrochen wurde"
+        },
+        "booklet_loading": {
+          "type": "string",
+          "description": "Test wird geladen"
+        },
+        "booklet_lockedBlock": {
+          "type": "string",
+          "description": "Zeit von zeitgesteuertem Aufgabenblock ist abgelaufen"
+        },
+        "booklet_requestFullscreen": {
+          "type": "string",
+          "description": "Text für Dialogfeld 'Vollbild aktivieren?'"
+        },
+        "syscheck_questionsRequiredMessage": {
+          "type": "string",
+          "description": "Nachricht an die Testperson, wenn einige Fragen, die als 'required' markiert sind, nicht beantwortet wurden"
+        },
+        "booklet_starterStartTestButtonLabel": {
+          "type": "string",
+          "description": "Hauptmenü: Beschriftung für den Knopf um Test zu starten"
+        },
+        "booklet_starterContinueTestButtonLabel": {
+          "type": "string",
+          "description": "Hauptmenü: Beschriftung für den Knopf um Test fortzusetzen"
+        },
+        "booklet_starterViewTestButtonLabel": {
+          "type": "string",
+          "description": "Hauptmenü: Beschriftung für den Knopf um Test anzusehen"
+        },
+        "booklet_starterLockedTestButtonLabel": {
+          "type": "string",
+          "description": "Hauptmenü: Beschriftung für den Knopf bei gesperrtem Test"
+        },
+        "syscheck_unitPrompt": {
+          "type": "string",
+          "description": "Titelzeile über der Aufgabe"
+        },
+        "syscheck_intro": {
+          "type": "string",
+          "description": "Text auf der ersten Seite des Systemchecks"
+        },
+        "syscheck_report_id": {
+          "type": "string",
+          "description": "Dialog 'Bericht senden': Platzhalter für das ID-Eingabefeld vor dem Senden des Berichts"
+        },
+        "syscheck_report_aboutPassword": {
+          "type": "string",
+          "description": "Dialog 'Bericht senden': Text über das Passworteingabefeld"
+        },
+        "syscheck_report_aboutReportId": {
+          "type": "string",
+          "description": "Dialog 'Bericht senden': Text über das Passworteingabefeld"
+        },
+        "gm_headline": {
+          "type": "string",
+          "description": "Überschrift: Gruppenmonitor"
+        },
+        "gm_show_monitor": {
+          "type": "string",
+          "description": "Titel für Monitorfunktion"
+        },
+        "gm_show_test": {
+          "type": "string",
+          "description": "Titel für Testüberprüfung"
+        },
+        "gm_menu_filter": {
+          "type": "string",
+          "description": "Menüeintrag: Sitzungen ausblenden"
+        },
+        "gm_menu_cols": {
+          "type": "string",
+          "description": "Menüeintrag: Spalten"
+        },
+        "gm_menu_cols_states": {
+          "type": "string",
+          "description": "Spalte: Booklet-Zustände"
+        },
+        "gm_col_personLabel": {
+          "type": "string",
+          "description": "Spalte: Teilnehmer"
+        },
+        "gm_col_state": {
+          "type": "string",
+          "description": "Spalte: Aktivität"
+        },
+        "gm_col_groupName": {
+          "type": "string",
+          "description": "Spalte: Gruppe"
+        },
+        "gm_col_bookletLabel": {
+          "type": "string",
+          "description": "Spalte: Testheft"
+        },
+        "gm_col_blockLabel": {
+          "type": "string",
+          "description": "Spalte: Block"
+        },
+        "gm_col_unitLabel": {
+          "type": "string",
+          "description": "Spalte: Aufgabe"
+        },
+        "gm_view_full": {
+          "type": "string",
+          "description": "Ansicht: Vollständig"
+        },
+        "gm_view_medium": {
+          "type": "string",
+          "description": "Ansicht: Nur Blöcke"
+        },
+        "gm_view_small": {
+          "type": "string",
+          "description": "Ansicht: Kurz"
+        },
+        "gm_controls": {
+          "type": "string",
+          "description": "Überschrift: Test-Steuerung"
+        },
+        "gm_selection_info": {
+          "type": "string",
+          "description": "Information gewählte Tests. Text-Substitutionen: (Alle/''), Anzahl, (''/s), Anzahl, (''/e)"
+        },
+        "gm_selection_info_none": {
+          "type": "string",
+          "description": "Information gewählte Tests: Keiner"
+        },
+        "gm_control_resume": {
+          "type": "string",
+          "description": "Control: weiter"
+        },
+        "gm_control_pause": {
+          "type": "string",
+          "description": "Control: pause"
+        },
+        "gm_control_goto": {
+          "type": "string",
+          "description": "Control: Springe zu Block"
+        },
+        "gm_control_unlock": {
+          "type": "string",
+          "description": "Control: Entsperren"
+        },
+        "gm_control_goto_unlock_blocks_confirm_text": {
+          "type": "string",
+          "description": "Control: Springe zu Block - soll Zeit wiederhergestellt werden?"
+        },
+        "gm_control_goto_unlock_blocks_confirm_headline": {
+          "type": "string",
+          "description": "Control: Springe zu Block - soll Zeit wiederhergestellt werden? - Überschrift"
+        },
+        "gm_control_unlock_success_warning": {
+          "type": "string",
+          "description": "Wird angezeigt, wenn Tests entsperrt wurden"
+        },
+        "gm_control_finish_everything": {
+          "type": "string",
+          "description": "Control: Testung beenden"
+        },
+        "gm_settings_tooltip": {
+          "type": "string",
+          "description": "Control: Ansicht"
+        },
+        "gm_scroll_down": {
+          "type": "string",
+          "description": "Control: Ganz nach unten"
+        },
+        "gm_hide_controls_tooltip": {
+          "type": "string",
+          "description": "Tooltip: Test-Steuerung verbergen"
+        },
+        "gm_control_unlock_tooltip": {
+          "type": "string",
+          "description": "Tooltip: Freigeben"
+        },
+        "gm_filter_locked": {
+          "type": "string",
+          "description": "Filter: gesperrte ausblenden"
+        },
+        "gm_filter_pending": {
+          "type": "string",
+          "description": "Filter: nicht gestartete ausblenden"
+        },
+        "gm_filter_target_mode": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - Modus"
+        },
+        "gm_filter_target_bookletId": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - TestheftId"
+        },
+        "gm_filter_target_unitId": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - Aufgaben-Id"
+        },
+        "gm_filter_target_blockId": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - Block-Id"
+        },
+        "gm_filter_target_bookletSpecies": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel -Testhefttyp"
+        },
+        "gm_filter_target_groupName": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - Gruppe"
+        },
+        "gm_filter_target_testState": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - detaillierter Teststatus"
+        },
+        "gm_filter_target_bookletStates": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Ziel - Testheft-Adaptivität-Zustand"
+        },
+        "gm_filter_type_equal": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Typ - gleicht"
+        },
+        "gm_filter_type_substring": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Typ - enthält"
+        },
+        "gm_filter_type_regex": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Typ - Regulärer Ausdruck"
+        },
+        "gm_filter_not": {
+          "type": "string",
+          "description": "Benutzerdefinierter Filter: Nicht"
+        },
+        "gm_codetoenter_unlock_tooltip": {
+          "type": "string",
+          "description": "Tooltip Passwort-geschützter Bereich geöffnet"
+        },
+        "gm_timeleft_tooltip": {
+          "type": "string",
+          "description": "Tooltip zeitgesteuerter Block: verbleibende Zeit. Ersetzungen (%s): Verbleibende Minuten, Minuten gesamt"
+        },
+        "gm_timeup_tooltip": {
+          "type": "string",
+          "description": "Tooltip zeitgesteuerter Block: Zeit abgelaufen"
+        },
+        "gm_timemax_tooltip": {
+          "type": "string",
+          "description": "Tooltip zeitgesteuerter Block: Noch nicht gestartet. Ersetzung (%s): Minutenzahl, "
+        },
+        "gm_control_goto_tooltip": {
+          "type": "string",
+          "description": "Tooltip über dem 'Springe zu'-Knopf, der erscheint, wenn kein Block gewählt ist"
+        },
+        "gm_multiple_booklet_species_warning": {
+          "type": "string",
+          "description": "Tooltip über dem 'Immer alle Auswählen'-Schalter, der erscheint, wenn dieser deaktiviert ist"
+        },
+        "gm_auto_checkall": {
+          "type": "string",
+          "description": "Der 'Immer alle Auswählen'-Schalter"
+        },
+        "gm_selection_text": {
+          "type": "string",
+          "description": "Der Text im Button bei Auswahl der Testleitungskonsole"
+        },
+        "gm_selection_text_expired": {
+          "type": "string",
+          "description": "Der Text im Button bei Auswahl der Testleitungskonsole, wenn die Gruppe abgelaufen ist. $date wird gegen das Ablaufdatum ersetzt."
+        },
+        "gm_selection_text_scheduled": {
+          "type": "string",
+          "description": "Der Text im Button bei Auswahl der Testleitungskonsole, wenn die noch nicht freigegeben abgelaufen ist. $date wird gegen das Freigabedatum ersetzt."
+        }
+      },
+      "additionalProperties": false
+    },
+    "profiles": {
+      "type": "object",
+      "properties": {
+        "groupMonitor": {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/profile"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "group": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "login"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "validFrom": {
+            "type": "string",
+            "pattern": "^\\d{1,2}/\\d{1,2}/\\d{2,4}\\W\\d{1,2}:\\d{2}$"
+          },
+          "validTo": {
+            "type": "string",
+            "pattern": "^\\d{1,2}/\\d{1,2}/\\d{2,4}\\W\\d{1,2}:\\d{2}$"
+          },
+          "validFor": {
+            "type": "integer"
+          },
+          "assetAssignments": {
+            "$ref": "#/$defs/assetAssignments"
+          },
+          "login": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/login"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "modeConfig": {
+      "type": "object",
+      "title": "Modus-Konfiguration",
+      "properties": {
+        "alwaysNewSession": {
+          "type": "boolean",
+          "description": "Erzwingt bei jedem Login eine frische Sitzung."
+        },
+        "monitorable": {
+          "type": "boolean",
+          "description": "Bestimmt, ob der Test im Gruppenmonitor sichtbar ist."
+        },
+        "canReview": {
+          "type": "boolean",
+          "description": "Erlaubt die Verwendung der Review-Funktion."
+        },
+        "saveResponses": {
+          "type": "boolean",
+          "description": "Speichert die Antworteingaben in der Datenbank."
+        },
+        "forceTimeRestrictions": {
+          "type": "boolean",
+          "description": "Setzt Zeitbeschränkungen durch."
+        },
+        "forceNaviRestrictions": {
+          "type": "boolean",
+          "description": "Erzwingt Navigations-Einschränkungen."
+        },
+        "showCode": {
+          "type": "boolean",
+          "description": "Zeigt Log-in/Freigabe-Codes an."
+        },
+        "showTimeLeft": {
+          "type": "boolean",
+          "description": "Blendet die verbleibende Bearbeitungszeit ein."
+        },
+        "showUnitMenu": {
+          "type": "boolean",
+          "description": "Aktiviert die Aufgabenübersicht/Navigationsmenü."
+        },
+        "receiveRemoteCommands": {
+          "type": "boolean",
+          "description": "Empfängt Steuerungsbefehle über den Monitor."
+        },
+        "canChangeStateOptions": {
+          "type": "boolean",
+          "description": "Erlaubt das Ändern von Zustandsoptionen."
+        }
+      },
+      "additionalProperties": false
+    },
+    "assetAssignments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Mapping von Slot-Namen auf Dateipfade"
+    },
+    "login": {
+      "type": "object",
+      "required": [
+        "name",
+        "mode"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pw": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "string",
+          "description": "Durchführungsmodus für den Login",
+          "oneOf": [
+            {
+              "const": "run-demo",
+              "title": "run-demo",
+              "description": "Modus für Vorführungen ohne Speicherung",
+              "properties": {
+                "config": {
+                  "$ref": "#/$defs/modeConfig",
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "monitor-group",
+              "title": "monitor-group",
+              "description": "Modus für die Gruppenüberwachung im Demo-Modus",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "monitor-study",
+              "title": "monitor-study",
+              "description": "Modus für die Studienüberwachung im Demo-Modus",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "run-hot-return",
+              "title": "run-hot-return",
+              "description": "Standard-Testdurchführung mit Fortsetzungsoption",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "run-hot-restart",
+              "title": "run-hot-restart",
+              "description": "Testdurchführung, die bei jedem Login eine neue Sitzung erzwingt",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "run-review",
+              "title": "run-review",
+              "description": "Review-Modus mit freier Navigation und Menü",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "run-trial",
+              "title": "run-trial",
+              "description": "Erweiterter Prüfdurchgang inklusive Datenspeicherung",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "run-simulation",
+              "title": "run-simulation",
+              "description": "Testsimulation mit Zeit- und Navigationsbeschränkungen ohne Datenspeicherung",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": true, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            },
+            {
+              "const": "sys-check-login",
+              "title": "sys-check-login",
+              "description": "Versteckt für alle anderen Logins den System Check. Der Check kann dann nur noch von Logins durchgeführt werden mit diesem Mode",
+              "properties": {
+                "config": {
+                  "type": "object",
+                  "title": "Modus-Konfiguration",
+                  "properties": {
+                    "alwaysNewSession": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/alwaysNewSession"},
+                    "monitorable": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/monitorable"},
+                    "canReview": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canReview"},
+                    "saveResponses": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/saveResponses"},
+                    "forceTimeRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceTimeRestrictions"},
+                    "forceNaviRestrictions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/forceNaviRestrictions"},
+                    "showCode": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showCode"},
+                    "showTimeLeft": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showTimeLeft"},
+                    "showUnitMenu": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/showUnitMenu"},
+                    "receiveRemoteCommands": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/receiveRemoteCommands"},
+                    "canChangeStateOptions": { "type": "boolean", "default": false, "$ref": "#/$defs/modeConfig/properties/canChangeStateOptions"}
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "monitorCode": {
+          "type": "string"
+        },
+        "booklets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "codes": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string",
+                "pattern": "^([a-z\\d-]+:[a-z\\d-]+,?\\W?)+$"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "assetAssignments": {
+          "$ref": "#/$defs/assetAssignments"
+        },
+        "viewSettings": {
+          "type": "object",
+          "properties": {
+            "theme": {
+              "type": "string"
+            },
+            "codeInput": {
+              "type": "object",
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "text-field",
+                    "keypad-symbols",
+                    "keypad-symbols-alt",
+                    "keypad-numbers"
+                  ]
+                },
+                "length": {
+                  "type": "integer",
+                  "minimum": 3
+                }
+              },
+              "additionalProperties": false
+            },
+            "monitorBookletVisibility": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "collapsed",
+                "hidden"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "blockColumn": {
+          "type": "string",
+          "enum": ["show", "hide"]
+        },
+        "unitColumn": {
+          "type": "string",
+          "enum": ["show", "hide"]
+        },
+        "groupColumn": {
+          "type": "string",
+          "enum": ["show", "hide"]
+        },
+        "bookletColumn": {
+          "type": "string",
+          "enum": ["show", "hide"]
+        },
+        "bookletStatesColumns": {
+          "type": "string"
+        },
+        "view": {
+          "type": "string",
+          "enum": ["full", "medium", "small"]
+        },
+        "filterPending": {
+          "type": "string",
+          "enum": ["yes", "no"]
+        },
+        "filterLocked": {
+          "type": "string",
+          "enum": ["yes", "no"]
+        },
+        "autoselectNextBlock": {
+          "type": "string",
+          "enum": ["yes", "no"]
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "field": {
+                "type": "string",
+                "enum": [
+                  "bookletLabel",
+                  "personLabel",
+                  "state",
+                  "blockLabel",
+                  "groupName",
+                  "bookletId",
+                  "unitId",
+                  "unitLabel",
+                  "blockId",
+                  "testState",
+                  "mode",
+                  "bookletSpecies",
+                  "bookletStates"
+                ]
+              },
+              "type": {
+                "type": "string",
+                "enum": ["equal", "substring", "regex"]
+              },
+              "value": {
+                "type": "string"
+              },
+              "subValue": {
+                "type": "string"
+              },
+              "not": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
