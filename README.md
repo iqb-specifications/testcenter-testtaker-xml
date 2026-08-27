@@ -7,4 +7,4 @@ https://w3id.org/iqb/spec/testcenter-testtaker-xml/18.0
 ```
 #### Planned Changes / Experimental
 
-Should a switch from XML to JSON take place, this JSON schema can be used for validation. In addition, documentation is being derived from it on a trial basis.
+If a switch from XML to JSON takes place, this JSON schema can be used for validation. Documentation is also derived from the schema; this can be found [here](https://iqb-specifications.github.io/testcenter-testtaker-xml/).
