@@ -124,12 +124,12 @@
               "description": "Titel für Starter-Seite",
               "default": "Testauswahl"
             },
-            "login_testEndButtondescription": {
+            "login_testEndButtonLabel": {
               "type":"string",
               "description": "Schalterbeschriftung für 'Test beenden'",
               "default": "Test beenden"
             },
-            "login_testResumeButtondescription": {
+            "login_testResumeButtonLabel": {
               "type":"string",
               "description": "Schalterbeschriftung für 'Test fortsetzen'",
               "default": "Test fortsetzen"
@@ -302,22 +302,22 @@
               "description": "Text für Dialogfeld 'Vollbild aktivieren?'",
               "default": "Soll das Vollbild aktiviert werden?"
             },
-            "booklet_starterStartTestButtondescription": {
+            "booklet_starterStartTestButtonLabel": {
               "type":"string",
               "description": "Hauptmenü: Beschriftung für den Knopf um Test zu starten",
               "default": "Starten"
             },
-            "booklet_starterContinueTestButtondescription": {
+            "booklet_starterContinueTestButtonLabel": {
               "type":"string",
               "description": "Hauptmenü: Beschriftung für den Knopf um Test fortzusetzen",
               "default": "Weiter"
             },
-            "booklet_starterViewTestButtondescription": {
+            "booklet_starterViewTestButtonLabel": {
               "type":"string",
               "description": "Hauptmenü: Beschriftung für den Knopf um Test anzusehen",
               "default": "Ansehen"
             },
-            "booklet_starterLockedTestButtondescription": {
+            "booklet_starterLockedTestButtonLabel": {
               "type":"string",
               "description": "Hauptmenü: Beschriftung für den Knopf bei gesperrtem Test",
               "default": "Fertig"
@@ -403,7 +403,7 @@
               "description": "Spalte: Booklet-Zustände",
               "default": "Zustände"
             },
-            "gm_col_persondescription": {
+            "gm_col_personLabel": {
               "type":"string",
               "description": "Spalte: Teilnehmer",
               "default": "Teilnehmer"
@@ -418,17 +418,17 @@
               "description": "Spalte: Gruppe",
               "default": "Gruppe"
             },
-            "gm_col_bookletdescription": {
+            "gm_col_bookletLabel": {
               "type":"string",
               "description": "Spalte: Testheft",
               "default": "Testheft"
             },
-            "gm_col_blockdescription": {
+            "gm_col_blockLabel": {
               "type":"string",
               "description": "Spalte: Block",
               "default": "Block"
             },
-            "gm_col_unitdescription": {
+            "gm_col_unitLabel": {
               "type":"string",
               "description": "Spalte: Aufgabe",
               "default": "Aufgabe"
