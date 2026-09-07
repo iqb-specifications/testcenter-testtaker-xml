@@ -147,7 +147,7 @@
         },
         "mode": {
           "type": "string",
-          "description": "Durchführungsmodus für den Login. Die Dokumentation der Modi erfolgt separat und ist [**hier**](https://iqb.pages.cms.hu-berlin.de/testcenter/pages/booklet-config.html) zu finden."
+          "description": "Durchführungsmodus für den Login. Die Dokumentation der Modi erfolgt separat und ist [**hier**](https://iqb.pages.cms.hu-berlin.de/testcenter/pages/test-mode.html) zu finden."
         },
         "Booklet": {
           "type": "array",
