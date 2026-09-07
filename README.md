@@ -7,4 +7,4 @@ https://w3id.org/iqb/spec/testcenter-testtaker-xml/18.0
 ```
 #### Experimental documentation
 
-[Documentation](https://iqb-specifications.github.io/testcenter-testtaker-xml) is generated from a Testtaker-JSON file. This documents all elements, attributes, and values ​​available in the testtaker.
+[Documentation](https://iqb-specifications.github.io/testcenter-testtaker-xml) is generated from a Testtaker-JSON file. This documents all elements, attributes, and values ​​available in the testtaker. Only user-defined texts and test modes are documented separately.
