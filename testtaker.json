@@ -26,7 +26,7 @@
       "type": "object",
       "additionalProperties": false,
       "description": "Key-Value Paare für benutzerdefinierte Texte.",
-       "properties": {
+      "properties": {
         "CustomText": {
           "type": "array",
           "description": "Die Dokumentation der key-value-Paare erfolgt separat und ist [**hier**](https://iqb.pages.cms.hu-berlin.de/testcenter/pages/custom-texts.html) zu finden."
@@ -147,7 +147,18 @@
         },
         "mode": {
           "type": "string",
-          "description": "Durchführungsmodus für den Login. Die Dokumentation der Modi erfolgt separat und ist [**hier**](https://iqb.pages.cms.hu-berlin.de/testcenter/pages/test-mode.html) zu finden."
+          "description": "Durchführungsmodus für den Login. Die Dokumentation der Modi erfolgt separat und ist [**hier**](https://iqb.pages.cms.hu-berlin.de/testcenter/pages/test-mode.html) zu finden.",
+          "enum": [
+            "run-hot-return",
+            "run-hot-restart",
+            "run-trial",
+            "run-review",
+            "monitor-group",
+            "monitor-study",
+            "sys-check-login",
+            "run-demo",
+            "run-simulation"
+          ]
         },
         "Booklet": {
           "type": "array",
@@ -290,7 +301,7 @@
           "description": "Steuert die automatische Auswahl des nächsten Blocks. Im Detail: Ist yes als Wert hinterlegt, wird nach jedem Sprung zu einem Block automatisch der nächste Block markiert. Ein erneuter Klick auf den Schalter “Springe zu” veranlasst dann einen Sprung zu dem automatisch markierten Block. Der Wert no verhindert diese automatische Markierung des nächsten Blocks. Das kann dann Sinn machen, wenn die Gefahr verringert werden soll, dass aus Versehen (Doppelklick auf “Springe zu”) in einen Block gesprungen wird, der noch nicht an der Reihe ist.",
           "enum": ["yes", "no"]
         },
-        "filters": {
+        "Filter": {
           "type": "array",
           "items": {
             "type": "object",
