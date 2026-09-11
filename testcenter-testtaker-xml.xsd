@@ -69,7 +69,7 @@
                     <xs:element name="ViewSettings" minOccurs="0">
                       <xs:complexType>
                         <xs:all>
-                          <xs:element name="theme" type="xs:string" minOccurs="0"/>
+                          <xs:element name="theme" type="ThemeType" minOccurs="0"/>
                           <xs:element name="codeInput" minOccurs="0">
                             <xs:complexType>
                               <xs:all>
@@ -275,7 +275,20 @@
   <xs:complexType name="AssetAssignmentType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute name="slot" type="xs:string" use="required"/>
+        <xs:attribute name="slot" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="logo"/>
+              <xs:enumeration value="codeInputIllustration"/>
+              <xs:enumeration value="loginIllustration"/>
+              <xs:enumeration value="codeInputCompanion"/>
+              <xs:enumeration value="starterCompanion"/>
+              <xs:enumeration value="starterCardDone"/>
+              <xs:enumeration value="loadingProgress"/>
+              <xs:enumeration value="confirmDialog"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -285,6 +298,15 @@
       <xs:pattern value="([a-z\d-]+:[a-z\d-]+,?\W?)+"/>
     </xs:restriction>
   </xs:simpleType>
+  
+  <xs:simpleType name="ThemeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Primar"/>
+      <xs:enumeration value="Sekundar"/>
+      <xs:enumeration value="Erwachsene"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:complexType name="ProfileReferenceType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -331,7 +353,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- see groupMonitorInterfaces.ts -->
   <xs:simpleType name="GroupMonitorProfileFilterField">
     <xs:restriction base="xs:string">
       <xs:enumeration value="bookletLabel"/>
