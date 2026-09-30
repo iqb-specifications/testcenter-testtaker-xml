@@ -105,7 +105,7 @@
                   <xs:attribute name="mode">
                     <xs:annotation>
                       <xs:documentation>
-                        See: https://github.com/iqb-berlin/testcenter/blob/master/docs/pages/test-mode.md
+                        See: https://iqb.pages.cms.hu-berlin.de/testcenter/pages/test-mode.html
                       </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
