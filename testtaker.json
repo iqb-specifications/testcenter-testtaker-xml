@@ -79,7 +79,7 @@
           },
           "validFor": {
             "type": "integer",
-            "description": "Dauer in Minuten, für die die Testung freigegeben ist."
+            "description": "Dauer in Minuten, für die die Testung freigegeben ist.Nach Ablauf ist keine erneute Anmeldung möglich."
           },
           "AssetAssignments": {
             "$ref": "#/$defs/AssetAssignments"
