@@ -338,7 +338,19 @@
         <xs:attribute name="label" type="xs:string" />
         <xs:attribute name="field" type="GroupMonitorProfileFilterField" />
         <xs:attribute name="type" type="FilterTypeType" />
-        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute name="value">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:annotation>
+                <xs:documentation>
+                  When field="state", allowed values are:
+                  monitor_group, demo, pending, locked, error,
+                  controller_terminated, connection_lost, paused, focus_lost, idle
+                </xs:documentation>
+              </xs:annotation>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="subValue" type="xs:string" />
         <xs:attribute name="not" type="xs:boolean" />
       </xs:extension>

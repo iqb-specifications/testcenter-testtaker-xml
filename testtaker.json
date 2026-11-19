@@ -332,7 +332,8 @@
                 "enum": ["equal", "substring", "regex"]
               },
               "value": {
-                "type": "string"
+                "type": "string",
+                "description": "Der Wert, auf den gefiltert wird. Wenn field='state', sind folgende Werte erlaubt: monitor_group, demo, pending, locked, error, controller_terminated, connection_lost, paused, focus_lost, idle"
               },
               "subValue": {
                 "type": "string"
