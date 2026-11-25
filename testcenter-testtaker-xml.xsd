@@ -368,7 +368,28 @@
   <xs:simpleType name="GroupMonitorProfileFilterField">
     <xs:restriction base="xs:string">
       <xs:enumeration value="bookletLabel"/>
-      <xs:enumeration value="personLabel"/>
+      <xs:enumeration value="personLabel">
+        <xs:annotation>
+          <xs:documentation>
+            Login, code and suffix of the participant as one value, joined by slashes, e.g. `test/aaa/xyz`.
+            Parts the participant does not have are left out.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="loginName">
+        <xs:annotation>
+          <xs:documentation>
+            Name of the login, whatever code and suffix the participant has.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="code">
+        <xs:annotation>
+          <xs:documentation>
+            Code the participant logged in with, whatever the login is. Empty if the login has no codes.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="state"/>
       <xs:enumeration value="blockLabel"/>
       <xs:enumeration value="groupName"/>

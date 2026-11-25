@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Testtaker 18.0",
-  "schema_version": "18.0",
+  "title": "Testtaker 18.2",
+  "schema_version": "18.2",
   "description": "Festlegung von Logins, Gruppen und Testheften für die Testdurchführung im IQB-Testcenter. **[Hier](https://iqb-berlin.github.io/tba-info/study-run/preparation/test-files/testtaker-xml.html#aufbau) ist eine beispielhafte Testtaker-XML's zu finden.**",
   "type": "object",
   "required": [
@@ -311,9 +311,12 @@
               },
               "field": {
                 "type": "string",
+                "description": "Das Feld, nach dem gefiltert wird. `loginName` und `code` vergleichen den Login bzw. den Code für sich. `personLabel` vergleicht Login, Code und Suffix als einen Wert, verbunden durch Schrägstriche, z. B. `test/aaa/xyz`.",
                 "enum": [
                   "bookletLabel",
                   "personLabel",
+                  "loginName",
+                  "code",
                   "state",
                   "blockLabel",
                   "groupName",
